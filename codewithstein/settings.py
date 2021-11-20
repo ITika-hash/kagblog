@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'treebeard',
     'menus',  # helper for model independent hierarchical website navigation
 
-    'front',
+    
     'filer',
     'easy_thumbnails',
     'aldryn_apphooks_config',
