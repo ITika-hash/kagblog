@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+
+
+            <img src="{{post.thumb.url}}" class="img-fluid" id="img" style="width: 100%;">
+             <h3 class="heading2"><b>{{ post.title }}</b>   </h3>
+
+                <p class="p2">
+                    {{ post.intro }}
+                </p>
+                <p class="p2"><small>Posted at {{ post.date_added }}</small></p>
+
+                <p class="p2"><a href="{% url 'post_detail' post.slug %}"><button type="button" class="btn btn-outline-warning">Continue Reading</button></a>
+                <button type="button" class="btn btn-outline-dark" onmouseover="showIcons()"><i class="fa fa-share"></i></button>
+                <span class="sharebtns">
+                    <a href=#><button type="button" class="btn btn-outline-primary"><i class="fa fa-facebook"></i></button></a>
+                    <a href=#><button type="button" class="btn btn-outline-info"><i class="fa fa-twitter"></i></button></a>
+                    <a href=#><button type="button" class="btn btn-outline-danger"><i class="fa fa-instagram"></i></button></a>
+                </span></p>
+
+
+
+                <hr style="border-color: black">
+
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% load front_tags %}
+    <head>
+        <meta charset="utf-8">
+        <meta charset="UTF-8">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="{% static 'js/index.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&display=swap" rel="stylesheet">
+        <title>Personal Blog</title>
+
+    </head>
+
+    <body>
+    <div id="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar" style="zoom: 150%">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <div class="dropdown">
+                <li class="nav-item" id="dropbtn">
+                    <a id="home" class="nav-link active" aria-current="page" href="{% url 'frontpage' %}">Home</a>
+
+                </li>
+
+                </div>
+
+                <div class="dropdown">
+                <li class="nav-item" id="dropbtn2">
+                    <a class="nav-link" href="{% url 'frontpage' %}">Posts</a>
+                    <div class="dropdown-content">
+                        {% for post in posts %}
+                        <a href="{% url 'post_detail' post.slug %}">{{ post.slug }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#AboutMe">About Me</a>
+                </li>
+
+
+            </ul>
+            <div class="socials">
+                <a href="#Instagram"><ion-icon id="icon1" name="logo-facebook"></ion-icon></a>
+                <a href="#Tweets"><ion-icon id="icon2" name="logo-twitter"></ion-icon></a>
+                <a href="#Instagram"><ion-icon id="icon3" name="logo-instagram"></ion-icon></a>
+                </div>
+
+        </div>
+    </div>
+</nav>
+        <div class="container-fluid">
+
+
+
+
+
+    <div class="row">
+
+
+        <div class="col-xxl-1" id="col1">
+
+        </div>
+        <div class="col-xxl-10">
+            <div>
+            </div>
+                 </div>
+    </div>
+                <div id="myySidebar" class="sidebar">
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <button class="closebtn" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+
+         <div class="col-sm-4">
+                <a id="About Me"> <h4 class="heading3"><b>About Me</b>  </h4></a>
+
+             <img src="{% static 'media/Gary-Final-Space.jpg' %}" class="img-fluid" style="width: 100%;">
+
+                <p class="p2">
+                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </p>
+         </div>
+         <div class="col-sm-4">
+
+                <h4 class="heading3"><b>Social Profiles</b>  </h4>
+                <div class="socials">
+                <a href="#Instagram"><ion-icon id="icon1" name="logo-facebook"></ion-icon></a>
+                <a href="#Tweets"><ion-icon id="icon2" name="logo-twitter"></ion-icon></a>
+                <a href="#Instagram"><ion-icon id="icon3" name="logo-instagram"></ion-icon></a>
+            </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+</div>
+
+                <div id="main2">
+                    <h1 class="heading"><b>Writing.</b>
+
+                <button class="openbtn" onclick="openNav()"><i class="fa fa-list"></i></button>
+
+            </h1>
+
+                {% block content %}
+
+                {% endblock %}
+
+    <div class="col-xxl-1" id="col2">
+
+        </div>
+
+<div class="container-fluid">
+    <hr style="border-color: black">
+
+        </div>
+    </div>
+            <div id="main3">
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
+                <img src="{% static 'media/Gary-Final-Space.jpg' %}" class="img-fluid" style="width: 100%;">
+                <p class="p2">
+                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </p>
+
+
+
+            </div>
+            <div class="col-sm-4">
+                <a id="Tweets"><h4 class="heading3"><b>Tweets</b>  </h4></a>
+                <p class="p2">
+                    It’s no secret that the digital industry is booming. From exciting startups to global brands,
+                    companies are reaching out to digital agencies, responding to the new possibilities available.
+                    However, the industry is fast becoming overcrowded, heaving with agencies offering similar services
+                    on the surface, at least. Producing creative, fresh projects is the key to standing out.
+                    Unique side projects are the best place, but balancing commercially and creatively
+                    lucrative work is tricky. So, this article looks at …
+
+                </p>
+
+
+            </div>
+            <div class="col-sm-4">
+                <a id="Instagram"><h4 class="heading3"><bpippyt>Instagram</bpippyt>  </h4></a>
+                <p class="p2">
+                    It’s no secret that the digital industry is booming. From exciting startups to global brands,
+                    companies are reaching out to digital agencies, responding to the new possibilities available.
+                    However, the industry is fast becoming overcrowded, heaving with agencies offering similar services
+                    on the surface, at least. Producing creative, fresh projects is the key to standing out.
+                    Unique side projects are the best place, but balancing commercially and creatively
+                    lucrative work is tricky. So, this article looks at …
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+</div>
+</div>
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/6c0b25782c.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+{% front_edit_scripts %}
+    </div>
+</body>
+</html>
+{% front_edit_scripts editor="ace" %}
