@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'cms',
     'treebeard',
     'menus',  # helper for model independent hierarchical website navigation
-    'front_edit',
+    
     'front',
     'filer',
     'easy_thumbnails',
