@@ -43,20 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'blog',
-    'cms',
-    'treebeard',
-    'menus',  # helper for model independent hierarchical website navigation
     
-    'front',
-    'filer',
-    'easy_thumbnails',
-    'aldryn_apphooks_config',
-    'parler',
-    'taggit',
-    'taggit_autosuggest',
-    'meta',
-    'sortedm2m',
-    'djangocms_blog',
 ]
 
 MIDDLEWARE = [
