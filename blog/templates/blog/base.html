@@ -91,10 +91,10 @@
          <div class="col-sm-4">
                 <a id="About Me"> <h4 class="heading3"><b>About Me</b>  </h4></a>
 
-             <img src="{% static 'media/Gary-Final-Space.jpg' %}" class="img-fluid" style="width: 100%;">
+             <img src="{{About.thumb.url}}" class="img-fluid" style="width: 100%;">
 
                 <p class="p2">
-                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                   {{About.text}}
                 </p>
          </div>
          <div class="col-sm-4">
@@ -142,9 +142,9 @@
         <div class="row">
             <div class="col-sm-4">
                 <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
-                <img src="{% static 'media/Gary-Final-Space.jpg' %}" class="img-fluid" style="width: 100%;">
+                <img src="{{About.thumb.url}}" class="img-fluid" style="width: 100%;">
                 <p class="p2">
-                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                   {{About.text}}
                 </p>
 
 
@@ -153,13 +153,7 @@
             <div class="col-sm-4">
                 <a id="Tweets"><h4 class="heading3"><b>Tweets</b>  </h4></a>
                 <p class="p2">
-                    It’s no secret that the digital industry is booming. From exciting startups to global brands,
-                    companies are reaching out to digital agencies, responding to the new possibilities available.
-                    However, the industry is fast becoming overcrowded, heaving with agencies offering similar services
-                    on the surface, at least. Producing creative, fresh projects is the key to standing out.
-                    Unique side projects are the best place, but balancing commercially and creatively
-                    lucrative work is tricky. So, this article looks at …
-
+                    {{Tweet.text}}
                 </p>
 
 
@@ -167,12 +161,7 @@
             <div class="col-sm-4">
                 <a id="Instagram"><h4 class="heading3"><b>Instagram</b>  </h4></a>
                 <p class="p2">
-                    It’s no secret that the digital industry is booming. From exciting startups to global brands,
-                    companies are reaching out to digital agencies, responding to the new possibilities available.
-                    However, the industry is fast becoming overcrowded, heaving with agencies offering similar services
-                    on the surface, at least. Producing creative, fresh projects is the key to standing out.
-                    Unique side projects are the best place, but balancing commercially and creatively
-                    lucrative work is tricky. So, this article looks at …
+                    {{Tweet.text}}
                 </p>
 
 
