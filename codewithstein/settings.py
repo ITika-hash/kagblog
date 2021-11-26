@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 DEBUG = os.getenv("DEBUG", "False") == "True"
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-ALLOWED_HOSTS = ['https://soconsumerly.com','https://kagblog-g2qn9.ondigitalocean.app/']
+ALLOWED_HOSTS = ['soconsumerly.com']
 
 
 
