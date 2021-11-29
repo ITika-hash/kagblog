@@ -22,12 +22,15 @@ class Comment(models.Model):
         ordering = ['date_added']
 
 class About(models.Model):
+    post = models.ForeignKey(Post, related_name='about', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
 
 class Tweet(models.Model):
+    post = models.ForeignKey(Post, related_name='tweet', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
 
 class Insta(models.Model):
+    post = models.ForeignKey(Post, related_name='insta', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
     
