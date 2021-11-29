@@ -26,11 +26,20 @@ class About(models.Model):
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
 
+    class Meta:
+        ordering = ['date_added']
+
 class Tweet(models.Model):
     post = models.ForeignKey(Post, related_name='tweet', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
 
+    class Meta:
+        ordering = ['date_added']
+
 class Insta(models.Model):
     post = models.ForeignKey(Post, related_name='insta', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ['date_added']
     
