@@ -22,24 +22,21 @@ class Comment(models.Model):
         ordering = ['date_added']
 
 class About(models.Model):
-    post = models.ForeignKey(Post, related_name='about', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
 
-    class Meta:
-        ordering = ['date_added']
+    def save(self, *args, **kwargs):
+        super(Model, self).save(*args, **kwargs)
 
 class Tweet(models.Model):
-    post = models.ForeignKey(Post, related_name='tweet', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
 
-    class Meta:
-        ordering = ['date_added']
+    def save(self, *args, **kwargs):
+        super(Model, self).save(*args, **kwargs)
 
 class Insta(models.Model):
-    post = models.ForeignKey(Post, related_name='insta', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
 
-    class Meta:
-        ordering = ['date_added']
+    def save(self, *args, **kwargs):
+        super(Model, self).save(*args, **kwargs)
     
