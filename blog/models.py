@@ -26,17 +26,17 @@ class About(models.Model):
     thumb = models.ImageField(default='default.png',blank=True)
 
     def save(self, *args, **kwargs):
-        super(Model, self).save(*args, **kwargs)
+        super(About, self).save(*args, **kwargs)
 
 class Tweet(models.Model):
     text = models.CharField(max_length=255)
 
     def save(self, *args, **kwargs):
-        super(Model, self).save(*args, **kwargs)
+        super(Tweet, self).save(*args, **kwargs)
 
 class Insta(models.Model):
     text = models.CharField(max_length=255)
 
     def save(self, *args, **kwargs):
-        super(Model, self).save(*args, **kwargs)
+        super(Insta, self).save(*args, **kwargs)
     
