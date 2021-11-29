@@ -21,20 +21,13 @@ class Comment(models.Model):
     class Meta:
         ordering = ['date_added']
 
-class About(admin.ModelAdmin):
+class About(models.Model):
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
 
-    ModelAdmin.save_model(self, request, obj, form, change)
-
-class Tweet(admin.ModelAdmin):
+class Tweet(models.Model):
     text = models.CharField(max_length=255)
-
-    ModelAdmin.save_model(self, request, obj, form, change)
 
 class Insta(models.Model):
     text = models.CharField(max_length=255)
-
-    def save(self, *args, **kwargs):
-        super(Insta, self).save(*args, **kwargs)
     
