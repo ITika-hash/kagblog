@@ -27,11 +27,10 @@ class About(admin.ModelAdmin):
 
     ModelAdmin.save_model(self, request, obj, form, change)
 
-class Tweet(models.Model):
+class Tweet(admin.ModelAdmin):
     text = models.CharField(max_length=255)
 
-    def save(self, *args, **kwargs):
-        super(Tweet, self).save(*args, **kwargs)
+    ModelAdmin.save_model(self, request, obj, form, change)
 
 class Insta(models.Model):
     text = models.CharField(max_length=255)
