@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'blog',
     'cms',
+    
     'treebeard',
     'menus',  # helper for model independent hierarchical website navigation
     
