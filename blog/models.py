@@ -22,12 +22,12 @@ class Comment(models.Model):
         ordering = ['date_added']
 
 class About(models.Model):
-    text = model.CharField(max_length=255)
+    text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
 
 class Tweet(models.Model):
-    text = model.CharField(max_length=255)
+    text = models.CharField(max_length=255)
 
 class Insta(models.Model):
-    text = model.CharField(max_length=255)
+    text = models.CharField(max_length=255)
     
