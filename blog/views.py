@@ -7,8 +7,9 @@ from .models import Post
 
 def frontpage(request):
     posts = Post.objects.all()
+    about = About.objects.all()
 
-    return render(request, 'blog/frontpage.html', {'posts': posts})
+    return render(request, 'blog/frontpage.html', {'posts': posts,'about': about})
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
 
@@ -26,8 +27,5 @@ def post_detail(request, slug):
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
 
-    def about_detail(request, slug):
-        about = About.objects.get(slug=slug)
 
-    return render(request, 'blog/base.html', {'about': about})
     

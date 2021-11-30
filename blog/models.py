@@ -23,16 +23,15 @@ class Comment(models.Model):
 
 class About(models.Model):
     text = models.CharField(max_length=255)
-    slug = models.SlugField()
     thumb = models.ImageField(default='default.png',blank=True)
     
 class Tweet(models.Model):
     text = models.CharField(max_length=255)
-    slug = models.SlugField()
+    
     
 
 class Insta(models.Model):
     text = models.CharField(max_length=255)
-    slug = models.SlugField()
+    
     
     
