@@ -27,3 +27,37 @@
 
     {% endfor %}
 {% endblock %}
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
+                <img src="{{ about.thumb.url }}" class="img-fluid" style="width: 100%;">
+                <p class="p2">
+                   {{ about.text }}
+                </p>
+
+
+
+            </div>
+            <div class="col-sm-4">
+                <a id="Tweets"><h4 class="heading3"><b>Tweets</b>  </h4></a>
+                <p class="p2">
+                    {{ Tweet.text }}
+                </p>
+
+
+            </div>
+            <div class="col-sm-4">
+                <a id="Instagram"><h4 class="heading3"><b>Instagram</b>  </h4></a>
+                <p class="p2">
+                    {{ Tweet.text }}
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</footer>
