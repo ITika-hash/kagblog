@@ -7,11 +7,15 @@ from .models import Post
 from .models import About
 
 
-def frontpage(request):
-    posts = Post.objects.all()
+def base(request):
     about = About.objects.all()
 
-    return render(request, 'blog/frontpage.html', {'posts': posts,'about': about})
+    return render(request, 'blog/base.html', {'about': about})
+
+def frontpage(request):
+    posts = Post.objects.all()
+
+    return render(request, 'blog/frontpage.html', {'posts': posts})
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
 

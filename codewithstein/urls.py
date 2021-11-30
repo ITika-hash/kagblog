@@ -3,12 +3,13 @@ from django.urls import include, path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
-from blog.views import frontpage, post_detail
+from blog.views import frontpage, post_detail, base
 urlpatterns = [
     #path('', base, name='base'),
     path('', frontpage, name='frontpage'),
     path('admin/', admin.site.urls),
     path('<slug:slug>/', post_detail, name='post_detail'),
+    path('<slug:slug>/', base, name='base'),
     path(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
 
 ]
