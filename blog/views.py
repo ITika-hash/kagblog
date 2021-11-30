@@ -10,7 +10,7 @@ from .models import About
 
 def frontpage(request):
     posts = Post.objects.all()
-    about = About.objects.all()
+    abouts = About.objects.all()
 
     return render(request, 'blog/frontpage.html', {'posts': posts,'about': about})
 def post_detail(request, slug):
