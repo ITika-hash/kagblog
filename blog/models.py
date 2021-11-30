@@ -24,10 +24,16 @@ class Comment(models.Model):
 class About(models.Model):
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
+    def __str__(self):
+        return self
 
 class Tweet(models.Model):
     text = models.CharField(max_length=255)
+    class Meta:
+        ordering = ['date_added']
 
 class Insta(models.Model):
     text = models.CharField(max_length=255)
+    class Meta:
+        ordering = ['date_added']
     
