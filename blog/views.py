@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 
+ 
+
 from .forms import CommentForm
 from .models import Post
 
@@ -23,3 +25,4 @@ def post_detail(request, slug):
         form = CommentForm()
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
+    
