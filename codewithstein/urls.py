@@ -7,7 +7,7 @@ from blog.views import frontpage, post_detail, base
 
 urlpatterns = [
     path('', base, name='base'),
-    path('', frontpage, name='frontpage'),
+    #path('', frontpage, name='frontpage'),
     path('admin/', admin.site.urls),
     path('<slug:slug>/', post_detail, name='post_detail'),
     path(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
