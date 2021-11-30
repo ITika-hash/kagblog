@@ -11,6 +11,7 @@
                     {{ post.intro }}
                 </p>
                 <p class="p2"><small>Posted at {{ post.date_added }}</small></p>
+                <p class="p2"><small>Posted at {{ about.text }}</small></p>
 
                 <p class="p2"><a href="{% url 'post_detail' post.slug %}"><button type="button" class="btn btn-outline-warning">Continue Reading</button></a>
                 <button type="button" class="btn btn-outline-dark" onmouseover="showIcons()"><i class="fa fa-share"></i></button>
@@ -27,37 +28,3 @@
 
     {% endfor %}
 {% endblock %}
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
-                <img src="{{ about.thumb.url }}" class="img-fluid" style="width: 100%;">
-                <p class="p2">
-                   {{ about.text }}
-                </p>
-
-
-
-            </div>
-            <div class="col-sm-4">
-                <a id="Tweets"><h4 class="heading3"><b>Tweets</b>  </h4></a>
-                <p class="p2">
-                    {{ Tweet.text }}
-                </p>
-
-
-            </div>
-            <div class="col-sm-4">
-                <a id="Instagram"><h4 class="heading3"><b>Instagram</b>  </h4></a>
-                <p class="p2">
-                    {{ Tweet.text }}
-                </p>
-
-
-            </div>
-
-        </div>
-
-    </div>
-</footer>
