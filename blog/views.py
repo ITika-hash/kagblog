@@ -25,4 +25,9 @@ def post_detail(request, slug):
         form = CommentForm()
 
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
+
+    def about_detail(request, slug):
+    about = About.objects.get(slug=slug)
+
+    return render(request, 'blog/base.html', {'about': about})
     
