@@ -12,7 +12,7 @@ def frontpage(request):
     posts = Post.objects.all()
     abouts = About.objects.all()
 
-    return render(request, 'blog/frontpage.html', {'posts': posts,'about': about})
+    return render(request, 'blog/frontpage.html', {'posts': posts,'abouts': abouts})
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
 
