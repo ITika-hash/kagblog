@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 
 from .forms import CommentForm
 from .models import Post
+from .models import About
 
 def frontpage(request):
     posts = Post.objects.all()
