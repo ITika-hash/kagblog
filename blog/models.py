@@ -25,7 +25,7 @@ class About(models.Model):
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
     def __str__(self):
-        return self
+        return self.text
 
 class Tweet(models.Model):
     text = models.CharField(max_length=255)
