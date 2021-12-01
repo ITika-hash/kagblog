@@ -20,24 +20,7 @@
         <div class="row">
 
 
-    <form method="post" action=".">
-        {% csrf_token %}
-        <div class="col-sm-4"><p class="p1"><h2 class="subtitle">Leave a Reply</h2> {{form.body}}</p>
-
-        </div>
-        <div class="col-sm-4"><p class="p1"> <h2 class="subtitle">Name</h2> {{form.name}}</p></div>
-
-        <div class="col-sm-4"><p class="p1"> <h2 class="subtitle">Email</h2>{{ form.email}}</p></div>
-
-
-
-        <div class="field">
-            <div class="control">
-                <button class="btn btn-outline-warning">comment</button>
-
-            </div>
-        </div>
-    </form>
+    
         </div>
 </div>
 {% endblock %}
