@@ -22,7 +22,6 @@ class Comment(models.Model):
         ordering = ['date_added']
 
 class About(models.Model):
-    post = models.ForeignKey(Post, related_name='abouts', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
     thumb = models.ImageField(default='default.png',blank=True)
     slug = models.SlugField()
