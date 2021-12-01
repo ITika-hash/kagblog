@@ -28,7 +28,7 @@ def post_detail(request, slug):
     else:
         form = CommentForm()
 
-    return render(request, 'blog/post_detail.html', {'post': post, 'form': form})
+    return render(request, 'blog/post_detail.html', {'post': post})
 
 
     
